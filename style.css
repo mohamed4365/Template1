@@ -1,0 +1,312 @@
+/* start variable */
+:root {
+  --main-color: #10cab7;
+  --p-color: #777;
+  --main-Padding: 100px; 
+}
+/* end variable */
+
+/* start global rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  padding-left: 15px;
+  margin-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+
+.special-heading {
+  font-weight: 800;
+  font-size: 70px;
+  letter-spacing: -4px;
+  color: #eee;
+  text-align: center;
+}
+.start-section {
+  text-align: center;
+}
+
+/* start header*/
+header {
+  padding: 20px;
+}
+header .logo {
+  width: 60px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .shape {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header .shape span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+header .shape span:first-child {
+  width: 100%;
+}
+header .shape span:nth-child(2) {
+  width: 60%;
+}
+header .shape span:last-child {
+  width: 100%;
+}
+/* end header */
+
+/* start landing section */
+.landing {
+  background-image: url(mountain.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.landing .intro-text {
+  text-align: center;
+}
+.landing .intro-text h1 {
+  color: var(--main-color);
+  font-size: 60px;
+  font-weight: bold;
+}
+.landing .intro-text p {
+  font-size: 20px;
+  margin-top: 50px;
+}
+/* end landing section */
+
+/* start features */
+.features {
+ padding: 30px 0;
+ background-color: #eee;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+   margin: 10px 
+}
+.features .container .feat {
+  padding: 20px;
+  text-align: center;
+}
+.features .container .feat h3 {
+  margin: 30px 0;
+  font-weight: 800;
+}
+.features .container .feat p {
+  line-height: 1.8;
+  color: var(--p-color);
+  font-size: 17px;
+}
+/* end features */
+
+/* start services */
+.services {
+  padding-top: var(--main-Padding);
+  padding-bottom: var(--main-Padding);
+}
+
+.services .container .start-section p {
+  font-size: 17px;
+  margin-top: -20px;
+  color: var(--p-color);
+}
+.services .container .services-contant {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: var(--main-Padding);
+}
+.services .container .services-contant .icon .serv p {
+  margin: 20px 0;
+}
+.services .container .services-contant .image img{
+  width: 200px;
+  height: 270px;
+}
+.services .container .services-contant .image {
+  position: relative;
+  width: 200px;
+}
+.services .container .services-contant .image::before {
+  content: "";
+  width: 100px;
+  background-color: #2c4755;
+  right: -70px;
+  top: -50px;
+  z-index: -1;
+  height: calc(100% + 100px);
+  position: absolute;
+}
+/* end services */
+
+/* start portfolio */
+.portfolio {
+  background-color: #ccc;
+  padding-top: var(--main-Padding);
+  padding-bottom: var(--main-Padding); 
+}
+.portfolio .container .start-section p {
+  margin-top: -20px;
+  color: var(--p-color);
+}
+.portfolio .container .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 100px; 
+}
+.portfolio .container .card {
+  background-color: white;
+}
+.portfolio .container .card .text {
+  padding: 20px;
+}
+.portfolio .container .card .text p {
+  color: var(--p-color);
+  padding-top: 20px; 
+}  
+.portfolio img {
+  width: 370px;
+  height: 250px;
+}
+/* end portfolio */
+
+/* stert about */
+.about {
+  padding-top: var(--main-Padding);
+  padding-bottom: var(--main-Padding); 
+}
+.about .container .start-section p {
+  margin-top: -20px;
+  color: var(--p-color);
+}
+.about .container .about-content {
+  padding-top: 100px;
+  display: flex; 
+}
+.about .container .about-content .image {
+  width: 400px;
+  height: 450px;
+  position: relative;
+}
+.about .container .about-content .image::after {
+  content: "";
+  width: 100px;
+  background-color: #eee;
+  left: -20px;
+  top: -40px;
+  z-index: -1;
+  height: calc(100% + 80px);
+  position: absolute;
+}
+.about .container .about-content .image::before {
+  content: "";
+  height: 300px;
+  width: 120px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  position: absolute;
+  top: -40px;
+  right: -150px;
+  z-index: -1;
+}
+.about .container .about-content .image img {
+  width: 300px;
+  height: 100%; 
+}
+.about .container .about-content .text {
+  padding-left: 300px;
+}
+.about .container .about-content .text p:first-of-type {
+  font-weight: bold; 
+  line-height: 2;
+  margin-bottom: 50px;
+}
+.about .container .about-content .text hr {
+  width: 50%;
+  border-color: var(--main-color);
+}
+.about .container .about-content .text p:last-of-type {
+  color: var(--p-color);
+  line-height: 2;
+  margin-top: 50px;
+}
+/* end about */
+
+/* stert contact */ 
+.contact {
+  background-color: #ccc;
+  padding-top: var(--main-Padding);
+  padding-bottom: var(--main-Padding);
+  text-align: center;
+}
+.contact .container .start-section p {
+  margin-top: -20px;
+  color: var(--p-color);
+}
+.contact .container .info {
+  margin-top: 100px; 
+  line-height: 2;
+  font-weight: bold;
+  font-size: 30px;
+}
+.contact .container .info p {
+  color: #2c4755;
+}
+.contact .container .info .link {
+  text-decoration: none;
+  color: var(--main-color);
+}
+/* end contact */
+
+/* stert footer */
+footer {
+  text-align: center;
+  color: white;
+  background-color: #2c4755;
+  height: 60px;
+  padding-top: 25px; 
+  font-size: 18px;
+}
+footer span {
+  font-weight: bold;
+  color: var(--main-color); 
+}
+/* end footer */
+
