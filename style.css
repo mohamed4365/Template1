@@ -88,7 +88,7 @@ header .shape span:last-child {
 
 /* start landing section */
 .landing {
-  background-image: url(mountain.jpg);
+  background-image: url(https://res.cloudinary.com/dz6atgbkh/image/upload/v1689851157/adventure-alpine-background-355770_ewajqt.jpg);
   background-size: cover;
   height: 100vh;
   display: flex;
